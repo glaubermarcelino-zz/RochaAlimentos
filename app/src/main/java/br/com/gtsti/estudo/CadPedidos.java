@@ -21,6 +21,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.gtsti.estudo.Util.Mask;
 import br.com.gtsti.estudo.Util.funcoes;
 //import br.com.jansenfelipe.androidmask.MaskEditTextChangedListener;
 
@@ -36,7 +37,7 @@ public class CadPedidos extends Activity {
     private funcoes funcao;
     private LinearLayout lPedido;
     private AutoCompleteTextView ac_endereco;
-  //  private MaskEditTextChangedListener mask_pedido_valor;
+    private Mask mask_pedido_valor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class CadPedidos extends Activity {
         sp_produto = (Spinner)findViewById(R.id.sp_produto);
         ac_endereco = (AutoCompleteTextView)findViewById(R.id.ac_cliente);
     //    mask_pedido_valor = new MaskEditTextChangedListener("###.##",valor);
-      //  valor.addTextChangedListener(mask_pedido_valor);
+        valor.addTextChangedListener(Mask.insert("###.##,##",valor));
 
         //Popula combo de clientes
         ArrayAdapter<String>adapterCliente = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getAllDataTable("CLIENTES",1));

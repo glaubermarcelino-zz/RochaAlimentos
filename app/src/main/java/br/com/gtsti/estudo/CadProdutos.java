@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import br.com.gtsti.estudo.Util.Mask;
 import br.com.gtsti.estudo.Util.funcoes;
 //import br.com.jansenfelipe.androidmask.MaskEditTextChangedListener;
 
@@ -31,7 +32,7 @@ public class CadProdutos extends Activity {
     private long idMedida;
     private LinearLayout lproduto;
     private funcoes funcao;
-  //  private MaskEditTextChangedListener mask_val_prod;
+    private Mask mask_val_prod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +55,7 @@ public class CadProdutos extends Activity {
         ultcompra = (EditText)findViewById(R.id.uCompra_produto);
         codbarra = (EditText)findViewById(R.id.cod_barra);
 
-    //    mask_val_prod = new MaskEditTextChangedListener("###.##",valor);
+        valor.addTextChangedListener(Mask.insert("##.###,##",valor));
       //  valor.addTextChangedListener(mask_val_prod);
 
         sp_medida = (Spinner)findViewById(R.id.sp_medida);
