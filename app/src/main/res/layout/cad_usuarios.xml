@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"/>
     <TextView
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="22dp"
         android:text="Nome completo"
         android:layout_gravity="center"
         />
@@ -21,12 +21,12 @@
         android:id="@+id/usuario_nome_completo"
         android:layout_gravity="center"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:inputType="text"/>
 
     <TextView
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="22dp"
         android:text="Usuario"
         android:layout_gravity="center"
         />
@@ -34,12 +34,12 @@
         android:id="@+id/usuario_nome"
         android:layout_gravity="center"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:inputType="text"/>
 
     <TextView
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="22dp"
         android:text="Senha (minimo 8 caracteres)"
         android:layout_gravity="center"
         />
@@ -47,15 +47,17 @@
         android:id="@+id/usuario_senha"
         android:layout_gravity="center"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:inputType="textPassword"/>
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tipo de usuário.:"/>
+        android:layout_width="300dp"
+        android:layout_height="22dp"
+        android:text="Tipo de usuário.:"
+        android:layout_gravity="center"/>
     <Spinner
+        android:layout_gravity="center"
         android:id="@+id/sp_perfil"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"></Spinner>
     <Button
         android:layout_marginTop="15dp"

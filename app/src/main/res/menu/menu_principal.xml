@@ -11,7 +11,7 @@
         android:id="@+id/action_usuario"
         android:orderInCategory="100"
         android:title="@string/action_usuarios"
-        app:showAsAction="never" />
+        app:showAsAction="never"/>
     <item
         android:id="@+id/action_relatorios"
         android:orderInCategory="100"

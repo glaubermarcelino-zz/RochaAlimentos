@@ -48,4 +48,27 @@ public class funcoes {
         // returning lables
         return clientes;
     }
+    public List<String> getPedidos(SQLiteOpenHelper dbFactory){
+        List<String> clientes = new ArrayList<String>();
+
+        // Select todos os dados
+        String selectQuery = "SELECT PED._ID, C.NOME,C.ENDERECO,C.CIDADE,C.BAIRRO FROM PEDIDOS PED INNER JOIN CLIENTES C ON C._ID = PED.IDCLIENTE";
+
+        SQLiteDatabase db = dbFactory.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // Pega todos os dados da tabela de uma determinada coluna "indCampo"
+        if (cursor.moveToFirst()) {
+            do {
+                clientes.add(cursor.getString(1));
+            } while (cursor.moveToNext());
+        }
+
+        // closing connection
+        cursor.close();
+        db.close();
+
+        // returning lables
+        return clientes;
+    }
 }

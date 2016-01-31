@@ -2,6 +2,7 @@ package br.com.gtsti.estudo;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
@@ -62,6 +63,12 @@ public class CadUsuarios extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
+
+        if (id == R.id.action_permissoes) {
+            startActivity(new Intent(this,PermissoesUsuario.class));
+            return true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }

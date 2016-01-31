@@ -23,7 +23,7 @@
         <activity android:theme="@android:style/Theme.Holo" android:name=".CadFinanceiro"/>
         <activity android:theme="@android:style/Theme.Holo" android:name=".CadPedidos"/>
         <activity android:theme="@android:style/Theme.Holo" android:name=".CadProdutos"/>
-        <activity android:theme="@android:style/Theme.Holo" android:name=".CadUsuarios"/>
+        <activity android:theme="@android:style/Theme.Holo.Light" android:name=".CadUsuarios"/>
         <activity android:theme="@android:style/Theme.Holo" android:name=".DashBoardActivity"/>
         <activity android:theme="@android:style/Theme.Holo" android:name=".Configuracao"/>
     </application>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/permissoes">
+        <CheckBoxPreference
+            android:key="modulo_financeiro"
+            android:summary="@string/modulo_financeiro_sumario"
+            android:title="@string/modulo_financeiro"/>
+
+        <CheckBoxPreference
+            android:key="modulo_produtos"
+            android:summary="@string/modulo_produtos_sumario"
+            android:title="@string/modulo_produtos"/>
+
+        <CheckBoxPreference
+            android:key="modulo_usuario"
+            android:summary="@string/modulo_usuario_sumario"
+            android:title="@string/modulo_usuario"/>
+
+        <CheckBoxPreference
+            android:key="modulo_pedidos"
+            android:summary="@string/modulo_pedidos_sumario"
+            android:title="@string/modulo_pedidos"/>
+
+        <CheckBoxPreference
+            android:key="modulo_cobrancas"
+            android:summary="@string/modulo_cobrancas_sumario"
+            android:title="@string/modulo_cobrancas"/>
+
+        <CheckBoxPreference
+            android:key="modulo_clientes"
+            android:summary="@string/modulo_clientes_sumario"
+            android:title="@string/modulo_clientes"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -4,6 +4,64 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/lCobranca">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:text="Pesquisar cidade/local"
+        android:layout_gravity="center"/>
+    <AutoCompleteTextView
+        android:id="@+id/ac_cobranca_cidades"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:text="Selecione o pedido.:"/>
+    <Spinner
+        android:id="@+id/sp_pedidos_cobranca"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"></Spinner>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:text="Data cobrança.:"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:onClick="selecionarData"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/cobranca_datacobranca"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:text="Usuário.:"/>
+    <Spinner
+        android:id="@+id/sp_usuario_cobranca"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"></Spinner>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:text="Observação.:"/>
+    <EditText
+        android:id="@+id/cobranca_obs"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+
+        android:layout_gravity="center"></EditText>
+
 <Button
     android:layout_width="250dp"
     android:layout_height="60dp"

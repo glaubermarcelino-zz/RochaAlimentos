@@ -66,6 +66,11 @@ public class DashBoardActivity  extends Activity {
             return true;
         }
 
+        if (id == R.id.action_usuario) {
+           startActivity(new Intent(this,CadUsuarios.class));
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 }
