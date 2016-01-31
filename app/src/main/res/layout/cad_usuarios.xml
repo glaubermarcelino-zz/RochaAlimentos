@@ -4,11 +4,67 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/lUsuarios">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/usuarios"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:text="Nome completo"
+        android:layout_gravity="center"
+        />
+    <EditText
+        android:id="@+id/usuario_nome_completo"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:text="Usuario"
+        android:layout_gravity="center"
+        />
+    <EditText
+        android:id="@+id/usuario_nome"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:text="Senha (minimo 8 caracteres)"
+        android:layout_gravity="center"
+        />
+    <EditText
+        android:id="@+id/usuario_senha"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:inputType="textPassword"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de usuário.:"/>
+    <Spinner
+        android:id="@+id/sp_perfil"
+        android:prompt="Selecione o perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Spinner>
     <Button
+        android:layout_marginTop="15dp"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:background="#00ccFF"
+        android:onClick="AddUsuario"
         android:text="Adicionar"/>
 
 </LinearLayout>

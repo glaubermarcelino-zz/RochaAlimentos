@@ -219,5 +219,12 @@ public class CadPedidos extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+    @Override
+    protected void onDestroy()
+    {
+        dbFactory.close();
+        super.onDestroy();
+    }
+
 }
 
