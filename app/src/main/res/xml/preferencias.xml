@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preferencias">
+        <CheckBoxPreference
+            android:key="modo_conectado"
+            android:summary="@string/modo_conectado_sumario"
+            android:title="@string/modo_conectado"/>
+        <EditTextPreference
+            android:dialogTitle="@string/avisar_atualizacoes"
+            android:key="sim_nao"
+            android:defaultValue="S"
+            android:summary="@string/autorizar_notificacoes"
+            android:title="@string/atualizacoes_push"/>
+    </PreferenceCategory>
+</PreferenceScreen>

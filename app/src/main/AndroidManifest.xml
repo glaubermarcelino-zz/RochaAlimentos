@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.gtsti.estudo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/rochaalimentos"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Holo.Light">
+        <activity android:name=".PrincipalActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Holo" android:name=".CadClientes"/>
+        <activity android:theme="@android:style/Theme.Holo" android:name=".CadCobrancas"/>
+        <activity android:theme="@android:style/Theme.Holo" android:name=".CadFinanceiro"/>
+        <activity android:theme="@android:style/Theme.Holo" android:name=".CadPedidos"/>
+        <activity android:theme="@android:style/Theme.Holo" android:name=".CadProdutos"/>
+        <activity android:theme="@android:style/Theme.Holo" android:name=".CadUsuarios"/>
+        <activity android:theme="@android:style/Theme.Holo" android:name=".DashBoardActivity"/>
+        <activity android:theme="@android:style/Theme.Holo" android:name=".Configuracao"/>
+    </application>
+
+</manifest>

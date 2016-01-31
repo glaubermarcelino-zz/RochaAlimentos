@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/lPedido">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pesquisar (Endereço)"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/ac_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Cliente.:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:id="@+id/sp_cliente"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        ></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade"/>
+    <EditText
+        android:id="@+id/ped_qtd"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="1"/>
+
+    <TextView
+        android:text="Produto.:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:id="@+id/sp_produto"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"></Spinner>
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor"/>
+    <EditText
+        android:id="@+id/ped_valor"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data cobrança"/>
+    <EditText
+        android:id="@+id/ped_datacobranca"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Observação"/>
+    <EditText
+        android:id="@+id/ped_obs"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="text"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="#00ccFF"
+        android:text="Lançar"
+        android:onClick="AddPedido"
+        />
+</LinearLayout>
+</ScrollView>

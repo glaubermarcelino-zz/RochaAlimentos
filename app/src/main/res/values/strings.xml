@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Rocha Alimentos</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_usuarios">Usuários</string>
+    <string name="action_relatorios">Relatórios</string>
+    <string name="action_saidas">Saidas</string>
+    <string name="action_entradas">Entradas</string>
+    <string name="action_deletar">Deletar</string>
+    <string name="action_editar">Editar</string>
+    <string name="avisar_atualizacoes">Informar sobre atualizações</string>
+    <string name="autorizar_notificacoes">Autorizar notificações,sobre novas atualizações</string>
+    <string name="atualizacoes_push">Notificar via Push</string>
+    <string name="modo_conectado_sumario">Manter sempre conectado</string>
+    <string name="modo_conectado">Modo conectado</string>
+    <string name="preferencias">Preferências</string>
+    <string name="entrar">Login</string>
+    <string name="manter_conectado">Manter conectado</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="erro_autenticacao">Erro na autenticação</string>
+    <string name="cli_bairro">Bairro.:</string>
+    <string name="cli_endereco">Endereço.:</string>
+    <string name="cli_telefone">Telefone.:</string>
+    <string name="cli_ref">Referências.:</string>
+    <string name="cli_obs">Observação.:</string>
+    <string name="nome_cliente">Nome.:</string>
+    <string name="cli_cidade">Cidade.:</string>
+    <string name="cli_uf">UF.:</string>
+    <string name="novo_cliente">Novo cliente</string>
+    <string name="nova_pedido">Novo pedido</string>
+    <string name="mov_financeiro">Finançeiro</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="cad_produtos">Novo Produto</string>
+    <string name="nova_rota">Cobranças</string>
+    <string-array name="CIDADES">
+        <item>ARACAJU</item>
+        <item>BARRA DOS COQUEIROS</item>
+        <item>SÃO CRISTÓVÃO</item>
+        <item>N. SRA DO SOCORRO</item>
+    </string-array>
+    <string-array name="UF">
+        <item>SE</item>
+        <item>SP</item>
+        <item>TO</item>
+        <item>MA</item>
+        <item>CE</item>
+        <item>RO</item>
+    </string-array>
+    <string-array name="MEDIDAS">
+        <item>UN</item>
+        <item>JG</item>
+        <item>KG</item>
+        <item>PC</item>
+        <item>BB</item>
+        <item>BD</item>
+        <item>FD</item>
+    </string-array>
+
+</resources>

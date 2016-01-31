@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.gtsti.estudo.DashBoardActivity">
+    <item
+        android:id="@+id/action_relatorios"
+        android:orderInCategory="100"
+        android:title="@string/action_relatorios"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_saidas"
+        android:orderInCategory="100"
+        android:title="@string/action_saidas"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_entradas"
+        android:orderInCategory="100"
+        android:title="@string/action_entradas"
+        app:showAsAction="never" />
+</menu>
