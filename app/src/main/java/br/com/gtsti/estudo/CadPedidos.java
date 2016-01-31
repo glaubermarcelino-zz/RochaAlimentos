@@ -59,7 +59,7 @@ public class CadPedidos extends Activity {
         sp_produto = (Spinner)findViewById(R.id.sp_produto);
         ac_endereco = (AutoCompleteTextView)findViewById(R.id.ac_cliente);
     //    mask_pedido_valor = new MaskEditTextChangedListener("###.##",valor);
-        valor.addTextChangedListener(Mask.insert("###.##,##",valor));
+        valor.addTextChangedListener(Mask.insert("###.###,###",valor));
 
         //Popula combo de clientes
         ArrayAdapter<String>adapterCliente = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getAllDataTable("CLIENTES",1));

@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import br.com.gtsti.estudo.Util.Mask;
 import br.com.gtsti.estudo.Util.funcoes;
 
 /**
@@ -30,6 +31,7 @@ public class CadClientes extends Activity {
     private Resources rs;
     private String[] cidades;
     private String[]ufs;
+    private Mask mask_fone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,9 @@ public class CadClientes extends Activity {
         bairro =(EditText)findViewById(R.id.cli_bairro);
         obs =(EditText)findViewById(R.id.cli_obs);
         referencia =(EditText)findViewById(R.id.cli_ref);
+
+        //Aplica a mascara para telefone
+        telefone.addTextChangedListener(mask_fone.insert("(##)0####-####",telefone));
 
         //Recuperação do layout principal
         Layout = (LinearLayout)findViewById(R.id.cliLayout);

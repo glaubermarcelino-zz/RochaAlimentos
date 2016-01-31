@@ -55,7 +55,7 @@ public class CadProdutos extends Activity {
         ultcompra = (EditText)findViewById(R.id.uCompra_produto);
         codbarra = (EditText)findViewById(R.id.cod_barra);
 
-        valor.addTextChangedListener(Mask.insert("##.###,##",valor));
+        valor.addTextChangedListener(Mask.insert("###.###,###", valor));
       //  valor.addTextChangedListener(mask_val_prod);
 
         sp_medida = (Spinner)findViewById(R.id.sp_medida);
