@@ -55,7 +55,6 @@
         android:text="Tipo de usuário.:"/>
     <Spinner
         android:id="@+id/sp_perfil"
-        android:prompt="Selecione o perfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></Spinner>
     <Button
