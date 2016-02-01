@@ -23,7 +23,7 @@
     <Spinner
         android:id="@+id/sp_pedidos_cobranca"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"></Spinner>
     <TextView
         android:layout_width="300dp"
@@ -47,7 +47,7 @@
     <Spinner
         android:id="@+id/sp_usuario_cobranca"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"></Spinner>
 
     <TextView
@@ -58,7 +58,7 @@
     <EditText
         android:id="@+id/cobranca_obs"
         android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
 
         android:layout_gravity="center"></EditText>
 

@@ -89,7 +89,7 @@ public class CadUsuarios extends Activity {
         values.put("PASSWORD",senha.getText().toString());
         values.put("IDPERFIL",sp_perfil.getSelectedItemId());
 
-        long retorno = db.insert("PERFIL_USUARIO",null,values);
+        long retorno = db.insert("USUARIOS",null,values);
         if (retorno != -1) {
             Toast.makeText(this, "Usuário cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
             funcao.ClearCampos(lUsuario);

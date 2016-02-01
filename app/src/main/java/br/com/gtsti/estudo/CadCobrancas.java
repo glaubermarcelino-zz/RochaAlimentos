@@ -17,6 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Calendar;
+
 import br.com.gtsti.estudo.Util.funcoes;
 
 /**
@@ -43,6 +45,15 @@ public class CadCobrancas extends Activity {
         sp_pedidos_cobranca = (Spinner)findViewById(R.id.sp_pedidos_cobranca);
         sp_usuario_cobranca = (Spinner)findViewById(R.id.sp_usuario_cobranca);
         obs = (EditText)findViewById(R.id.cobranca_obs);
+
+
+        Calendar calendar = Calendar.getInstance();
+        ano = calendar.get(Calendar.YEAR);
+        mes = calendar.get(Calendar.MONTH);
+        dia = calendar.get(Calendar.DAY_OF_MONTH);
+
+        dataCobranca = (Button)findViewById(R.id.cobranca_datacobranca);
+        dataCobranca.setText(dia +"/"+(mes+1)+"/"+ano);
 
         //Populando Spinners
         //PEDIDOS

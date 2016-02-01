@@ -21,7 +21,7 @@
         android:id="@+id/usuario_nome_completo"
         android:layout_gravity="center"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:inputType="text"/>
 
     <TextView
@@ -34,7 +34,7 @@
         android:id="@+id/usuario_nome"
         android:layout_gravity="center"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:inputType="text"/>
 
     <TextView
@@ -47,7 +47,7 @@
         android:id="@+id/usuario_senha"
         android:layout_gravity="center"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:inputType="textPassword"/>
     <TextView
         android:layout_width="300dp"
