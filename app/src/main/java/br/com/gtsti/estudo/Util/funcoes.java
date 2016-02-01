@@ -49,10 +49,10 @@ public class funcoes {
         return clientes;
     }
     public List<String> getPedidos(SQLiteOpenHelper dbFactory){
-        List<String> clientes = new ArrayList<String>();
+        List<String> dados = new ArrayList<String>();
 
         // Select todos os dados
-        String selectQuery = "SELECT PED._ID, C.NOME,C.ENDERECO,C.CIDADE,C.BAIRRO FROM PEDIDOS PED INNER JOIN CLIENTES C ON C._ID = PED.IDCLIENTE";
+        String selectQuery = "SELECT PED._ID, C.NOME,C.ENDERECO,C.CIDADE,C.BAIRRO FROM PEDIDOS PED INNER JOIN CLIENTES C ON  PED.IDCLIENTE = C._ID";
 
         SQLiteDatabase db = dbFactory.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -60,7 +60,30 @@ public class funcoes {
         // Pega todos os dados da tabela de uma determinada coluna "indCampo"
         if (cursor.moveToFirst()) {
             do {
-                clientes.add(cursor.getString(1));
+                dados.add(cursor.getString(1));
+            } while (cursor.moveToNext());
+        }
+
+        // closing connection
+        cursor.close();
+        db.close();
+
+        // returning lables
+        return dados;
+    }
+    public List<String> getVendasDia(SQLiteOpenHelper dbFactory){
+        List<String> clientes = new ArrayList<String>();
+
+        // Select todos os dados
+        String selectQuery = "SELECT * FROM COBRANCAS WHERE DATACOBRANCA = CURRENT_TIMESTAMP";
+
+        SQLiteDatabase db = dbFactory.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // Pega todos os dados da tabela de uma determinada coluna "indCampo"
+        if (cursor.moveToFirst()) {
+            do {
+                clientes.add(cursor.getString(1)+" "+cursor.getString(3));
             } while (cursor.moveToNext());
         }
 

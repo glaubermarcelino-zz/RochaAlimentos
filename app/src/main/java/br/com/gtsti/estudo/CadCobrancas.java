@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -32,6 +33,7 @@ public class CadCobrancas extends Activity {
     private DbFactory dbFactory;
     private funcoes funcao;
     private LinearLayout lCobrancas;
+    private AutoCompleteTextView acPesquisaCidade;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,7 @@ public class CadCobrancas extends Activity {
         dataCobranca = (Button)findViewById(R.id.cobranca_datacobranca);
         sp_pedidos_cobranca = (Spinner)findViewById(R.id.sp_pedidos_cobranca);
         sp_usuario_cobranca = (Spinner)findViewById(R.id.sp_usuario_cobranca);
+        acPesquisaCidade = (AutoCompleteTextView)findViewById(R.id.ac_cobranca_cidades);
         obs = (EditText)findViewById(R.id.cobranca_obs);
 
 
@@ -60,6 +63,10 @@ public class CadCobrancas extends Activity {
         ArrayAdapter<String>adapterPedidos = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,funcao.getPedidos(dbFactory));
         adapterPedidos.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         sp_pedidos_cobranca.setAdapter(adapterPedidos);
+
+        ArrayAdapter<String>adapterPesquisaCidade = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,funcao.getAllDataTable("CIDADES",1,dbFactory));
+        adapterPesquisaCidade.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        acPesquisaCidade.setAdapter(adapterPesquisaCidade);
 
         //USUARIOS
         ArrayAdapter<String>adapterUsuarios = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,funcao.getAllDataTable("USUARIOS", 2, dbFactory));

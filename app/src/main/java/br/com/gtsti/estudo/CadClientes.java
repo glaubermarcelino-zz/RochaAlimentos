@@ -63,11 +63,11 @@ public class CadClientes extends Activity {
         Layout = (LinearLayout)findViewById(R.id.cliLayout);
 
         //Adapter para o Spinner
-        ArrayAdapter<String>adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,cidades);
+        ArrayAdapter<String>adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,funcao.getAllDataTable("CIDADES",1,dbFactory));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spcidade.setAdapter(adapter);
 
-        ArrayAdapter<String>adapterUF = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,ufs);
+        ArrayAdapter<String>adapterUF = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,funcao.getAllDataTable("UF",2,dbFactory));
         adapterUF.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spuf.setAdapter(adapterUF);
 

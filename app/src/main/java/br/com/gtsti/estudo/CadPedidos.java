@@ -173,7 +173,7 @@ public class CadPedidos extends Activity {
         ContentValues values = new ContentValues();
         values.put("qtd",qtd.getText().toString());
         values.put("valor",valor.getText().toString());
-        values.put("datacobranca",datacobranca.getText().toString());
+        values.put("datapedido",datacobranca.getText().toString().replace("//",""));
         values.put("obs",obs.getText().toString());
         values.put("idcliente",sp_cliente.getSelectedItemId());
         values.put("idprod",sp_produto.getSelectedItemId());

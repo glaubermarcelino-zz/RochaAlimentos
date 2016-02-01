@@ -4,15 +4,43 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import br.com.gtsti.estudo.Util.funcoes;
 
 /**
  * Created by Glauber on 24/01/2016.
  */
 public class CadFinanceiro extends Activity {
+    private ListView lvVendasDia;
+    private funcoes funcao;
+    private DbFactory dbFactory;
+    private LinearLayout lFinanceiro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mov_financeiro);
+        dbFactory = new DbFactory(this);
+        funcao = new funcoes();
+
+        lvVendasDia = (ListView)findViewById(R.id.lv_vendas_dia);
+        lFinanceiro = (LinearLayout)findViewById(R.id.lMonFinanceiro);
+
+        ArrayAdapter<String>adapter_vendas_dia = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,funcao.getVendasDia(dbFactory));
+        adapter_vendas_dia.setDropDownViewResource(android.R.layout.simple_list_item_1);
+        lvVendasDia.setAdapter(adapter_vendas_dia);
+
+        lvVendasDia.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(),"Item Selecionado.: "+lvVendasDia.getSelectedItem(),Toast.LENGTH_LONG).show();
+            }
+        });
     }
     //Criação de Menu para activity
     @Override

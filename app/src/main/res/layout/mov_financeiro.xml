@@ -4,7 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/lMonFinanceiro">
-
+<ListView
+    android:id="@+id/lv_vendas_dia"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></ListView>
     <Button
         android:layout_width="250dp"
         android:layout_height="60dp"

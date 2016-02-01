@@ -68,6 +68,10 @@ public class CadUsuarios extends Activity {
             startActivity(new Intent(this,PermissoesUsuario.class));
             return true;
         }
+        if (id == R.id.action_relatorios) {
+            startActivity(new Intent(this,RelUsuarios.class));
+            return true;
+        }
 
 
         return super.onOptionsItemSelected(item);
