@@ -1,0 +1,1 @@
+alert("Minha extensão adicionada com sucesso");
